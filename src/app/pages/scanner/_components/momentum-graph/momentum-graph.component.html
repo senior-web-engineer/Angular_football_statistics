@@ -1,0 +1,24 @@
+<div 
+  [style.width.px]="momentumWidth"  
+  style="justify-content: center; height: 60px;"
+>
+  <canvas
+    #canvas
+    [style.width.px]="momentumWidth"
+    [style.height.px]="momentumHeight"
+    [width]="canvasWidth"
+    [height]="canvasHeight"
+  >
+  </canvas>
+  <!-- <canvas 
+    style="background: transparent;"
+    baseChart 
+    [ngClass]="isLight() ? 'light-chart':'dark-chart'"
+    [datasets]="barChartData"
+    [labels]="barChartLabels"
+    [options]="barChartOptions"
+    [plugins]="barChartPlugins"
+    [legend]="barChartLegend"
+    [chartType]="barChartType">
+  </canvas> -->
+</div>

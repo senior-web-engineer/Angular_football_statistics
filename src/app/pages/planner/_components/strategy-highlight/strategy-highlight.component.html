@@ -1,0 +1,130 @@
+<div class="bg-white justify-content-start highlight-container" [ngClass]="{'disabled': disabled}">
+  <div class="col-12">
+    <div class="margin-top-bottom">
+      <span class="highlight-title"> Stats Difference </span>
+      <img src="assets/img/psd/info.png" class="icon-info" />
+    </div>
+    <div class="d-flex justify-content-start margin-top-bottom">
+      <div class="spinnerWrap">
+        <p>High</p>
+        <app-stats-number-spinner
+        [disabled]="disabled"
+          [name]="'statsDifferenceHigh'"
+          [(value)]="highlightConfig.statsDifferenceHighValue"
+          [(color)]="highlightConfig.statsDifferenceHighColour"
+          [updateStrategy]="handleChange.bind(this)"
+        ></app-stats-number-spinner>
+      </div>
+      <div class="spinnerWrap">
+        <p>Medium</p>
+        <app-stats-number-spinner
+        [disabled]="disabled"
+          [name]="'statsDifferenceMedium'"
+          [(value)]="highlightConfig.statsDifferenceMediumValue"
+          [(color)]="highlightConfig.statsDifferenceMediumColour"
+          [updateStrategy]="handleChange.bind(this)"
+        ></app-stats-number-spinner>
+      </div>
+      <div class="spinnerWrap">
+        <p>Low</p>
+        <app-stats-number-spinner
+        [disabled]="disabled"
+          [name]="'statsDifferenceLow'"
+          [(value)]="highlightConfig.statsDifferenceLowValue"
+          [(color)]="highlightConfig.statsDifferenceLowColour"
+          [updateStrategy]="handleChange.bind(this)"
+        ></app-stats-number-spinner>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="margin-top-bottom">
+      <span class="highlight-title"> Attack ratio percentage </span>
+      <img src="assets/img/psd/info.png" class="icon-info" />
+    </div>
+    <div class="d-flex justify-content-start margin-top-bottom">
+      <div class="spinnerWrap">
+        <p>High</p>
+        <app-stats-number-spinner
+        [disabled]="disabled"
+          [name]="'attackConversionHigh'"
+          [(value)]="highlightConfig.attackConversionHighValue"
+          [(color)]="highlightConfig.attackConversionHighColour"
+          [updateStrategy]="handleChange.bind(this)"
+        ></app-stats-number-spinner>
+      </div>
+      <div class="spinnerWrap">
+        <p>Low</p>
+        <app-stats-number-spinner
+        [disabled]="disabled"
+          [name]="'attackConversionLow'"
+          [(value)]="highlightConfig.attackConversionLowValue"
+          [(color)]="highlightConfig.attackConversionLowColour"
+          [updateStrategy]="handleChange.bind(this)"
+        ></app-stats-number-spinner>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="margin-top-bottom">
+      <span class="highlight-title"> Row Click </span>
+      <img src="assets/img/psd/info.png" class="icon-info" />
+    </div>
+    <div class="d-flex justify-content-start margin-top-bottom">
+      <div class="spinnerWrap color-picker-wrap">
+        <app-color-picker
+          [label]="'Primary'"
+          [disabled]="disabled"
+          [color]="gridDisplayConfig.RowClickPrimary"
+          (colorChange)="updateRowHighlightColour($event, 'RowClickPrimary')"
+        >
+        </app-color-picker>
+      </div>
+      <div class="spinnerWrap color-picker-wrap">
+        <app-color-picker
+        [disabled]="disabled"
+          [label]="'Secondary'"
+          [color]="gridDisplayConfig.RowClickSecondary"
+          (colorChange)="updateRowHighlightColour($event, 'RowClickSecondary')"
+        >
+        </app-color-picker>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="margin-top-bottom">
+      <span class="highlight-title"> Row Hover </span>
+      <img src="assets/img/psd/info.png" class="icon-info" />
+    </div>
+    <div class="d-flex justify-content-start margin-top-bottom">
+      <div class="spinnerWrap color-picker-wrap">
+        <app-color-picker
+        [disabled]="disabled"
+          [label]="'Colour'"
+          [color]="gridDisplayConfig.RowHoverColour"
+          (colorChange)="updateRowHighlightColour($event, 'RowHoverColour')"
+        >
+        </app-color-picker>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-12">
+    <div class="margin-top-bottom">
+      <span class="highlight-title"> Shape </span>
+    </div>
+    <div class="d-flex justify-content-start margin-top-bottom">
+      <div class="spinnerWrap color-picker-wrap">
+        <select
+          class="bg-semi-success mb-5 text-success highlight-shape-select border-0"
+          style="width: inherit;"
+          [value]="highlightConfig.shape"
+          [disabled]="disabled"
+          (change)="handleChangeShape($event.target.value)"
+        >
+          <option value="rect">Rectangle</option>
+          <option value="circle">Circle</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

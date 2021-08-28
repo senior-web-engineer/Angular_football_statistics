@@ -1,0 +1,143 @@
+.column-visibility {
+  .visibility-section {
+    border-bottom: 1px solid var(--color-gray);
+
+    .section-header {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+
+      .section-title {
+        font-size: 14px;
+        font-family: "poppins-medium";
+      }
+    }
+
+    .section-content {
+      button {
+        margin: 12px 24px 12px 0px !important;
+
+        &.active {
+          background-color: var(--color-success) !important;
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+.column-section {
+  .section-header {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+
+    .section-title {
+      font-size: 14px;
+      font-family: "poppins-medium";
+    }
+  }
+
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+
+  .column-list {
+    .btn-column {
+      margin-right: 5px;
+      color: white;
+      font-size: 12px;
+    }
+
+    .column-visible {
+      background: #146853;
+      border: 1px solid #3bb8de;
+      text-shadow: 1px 1px #3bb8de;
+    }
+
+    .column-invisible {
+      background: #6c757d;
+    }
+  }
+}
+
+.function-button-section {
+  margin-bottom: 50px;
+
+  .discard-changes {
+    background: #6c757d;
+    color: white;
+    border-radius: 5px;
+  }
+}
+
+.column-preview {
+  display: inline-flex;
+  margin: 20px 0 20px 0;
+
+  .column-preview-child {
+    display: block;
+    margin-left: 10px;
+
+    .child-title-div {
+      text-align: center;
+
+      .child-title {
+        font-size: 12px;
+      }
+    }
+    .column-preview-section {
+      margin-top: 20px;
+
+      .column-preview-detail {
+        height: 30px;
+        padding: 2px;
+        border: 1px solid lightgray;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.custom-column-section {
+  .new-description {
+    text-align: center;
+  }
+
+  .field-select {
+    width: 200px;
+  }
+
+  .minute-select {
+    width: 200px;
+  }
+
+  .custom-column-name {
+    line-height: 31px;
+    vertical-align: middle;
+  }
+}
+
+.col-sm-2{
+  margin-top: 6px;
+}
+
+.col-sm-8{
+  margin-top: 6px;
+}
+
+.btn-createcolumn {
+  position: absolute;
+  bottom: 0px;
+  min-width: 120px;
+  color: white;
+  font-size: 12px;
+  background: #146853;
+  cursor: pointer;
+}
+.btn.disabled{
+  cursor: not-allowed;
+}
+.disabled {
+  opacity: .7 !important;
+}

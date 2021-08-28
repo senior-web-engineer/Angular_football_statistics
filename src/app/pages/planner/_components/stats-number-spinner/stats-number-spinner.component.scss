@@ -1,0 +1,13 @@
+:host::ng-deep .input-group {
+  width: auto !important;
+}
+.color-picker {
+  cursor: pointer;
+  float: right;
+  height: 45px;
+  width: 45px;
+  margin-left: 5px;
+  border-radius: 4px;
+  position: relative;
+  z-index: 0;
+}

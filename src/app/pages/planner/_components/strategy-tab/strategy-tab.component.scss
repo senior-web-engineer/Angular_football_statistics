@@ -1,0 +1,30 @@
+::ng-deep .strategy-tab {
+  margin-top: 24px !important;
+}
+
+:host ::ng-deep .section-title {
+  font-size: 19px !important;
+  font-weight: 800 !important;
+  color: black !important;
+}
+
+:host ::ng-deep .strategy-tab {
+  input[type=number]::-webkit-outer-spin-button,
+  input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+
+  input[type=number] {
+      -moz-appearance:textfield;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("../../../../../assets/dropdown.png") right/12px no-repeat #fff;
+    padding-right: 20px;
+    background-position-x: 96%;
+  }
+}
